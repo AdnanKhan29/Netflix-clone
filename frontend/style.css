@@ -1,0 +1,359 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 56px;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+
+header a.logo{
+    display: block;
+
+}
+
+header .logo svg{
+    fill: #e50914 ;
+    height: 37px ;
+}
+
+header div+div {
+    text-align: right;
+}
+
+header a.button{
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 17px;
+    border-radius: 3px;
+}
+
+header select{
+    background: transparent;
+    color: #fff;
+    padding: 7px 17px;
+    padding-right: 6px 0 6px 20px ;
+    border-radius: 3px;
+}
+
+header div.select{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+header div.select svg{
+    height: 16px;
+    fill: #fff;
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 4px;
+}
+
+div.splash{
+    position: relative;
+}
+
+div.splash div.gradient{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    position: absolute;
+    inset: 0;
+}
+
+div.splash div.background img{
+    max-width: 100%;
+    opacity: 0.6;
+}
+
+div.splash div.content{
+    max-width: 655px;
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    display: grid;
+    margin-left: -327.5px;
+    align-items: center;
+    text-align: center;
+}
+div.splash h1, div.splash h2, div.splash h3{
+    font-weight: normal;
+}
+
+div.splash h1{
+    font-size: 3.125rem;
+    font-weight: bold;
+}
+
+div.splash h2{
+    font-size: 1.625rem;
+    margin-top: 13px;
+    margin-bottom: 29px;
+}
+
+div.splash h3{
+    font-size: 1.2rem;
+}
+
+div.splash form{
+    position: relative;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr max-content;
+}
+
+div.splash input{
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+div.splash input ~ span{
+    position: absolute;
+    left: 12px;
+    top: 19px;
+    z-index: 3;
+    color: #aaa;
+    transition: all 0.15s ease;
+    pointer-events: none;
+
+}
+
+div.splash input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+
+div.splash input:focus ~ span{
+    top: 4px;
+    font-size: .8rem;
+}
+
+div.splash button{
+    font-size: 1.625rem;
+    padding: 12px 26px;
+    background-color: #e50914;
+    color: #fff;
+    border: 0;
+}
+
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+    border-top: 6px solid #333;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2{
+    font-family: 500;
+    font-size: 40px;
+
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    background: #303030 ;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .contents{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .contents{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+form{
+    position: relative;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr max-content;
+}
+
+input{
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    width: 90%;
+    background: #000;
+}
+input ~ span{
+    position: absolute;
+    left: 30px;
+    top: 19px;
+    z-index: 3;
+    color: #aaa;
+    transition: all 0.15s ease;
+    pointer-events: none;
+
+}
+
+input:focus{
+    padding-top: 19px;
+    padding-bottom: 11px;
+}
+
+input:focus ~ span{
+    top: 4px;
+    font-size: .8rem;
+}
+
+ button{
+    font-size: 1.625rem;
+    padding: 12px 26px;
+    background-color: #e50914;
+    color: #fff;
+    border: 0;
+    margin-left: 6px;
+}
+
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small{
+    font-size: 18px;
+}
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer select{
+    background: transparent;
+    color: #fff;
+    padding: 7px 17px;
+    padding-right: 6px 0 6px 20px ;
+    border-radius: 3px;
+}
+.footer .select{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.footer .select svg{
+    height: 16px;
+    fill: #fff;
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 4px;
+}
+
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
