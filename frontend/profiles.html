@@ -12,7 +12,7 @@
         <div class="main-div">
             <h1>Who's watching?</h1>
             <div class="memberDiv">
-                <button class="btn"><span>Adnan</span></button>
+                <button class="btn" onclick="navigateToProfile('home.html')"><span>Adnan</span></button>
                 <button class="btn"><span>Abdul</span></button>
                 <button class="btn"><span>Tarun</span></button>
                 <button class="btn"><span>Mallesh</span></button>
@@ -21,6 +21,10 @@
             <button class="manageProfile">Manage Profiles</button>
         </div>
     </div>
-
+    <script>
+        function navigateToProfile(page) {
+          window.location.href = page;
+        }
+      </script>
 </body>
 </html>
